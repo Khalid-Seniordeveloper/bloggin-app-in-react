@@ -14,9 +14,9 @@ const Register = () => {
     return new Promise((resolve, reject) => {
         createUserWithEmailAndPassword(auth, obj.email, obj.password)
             .then(async (res) => {
-                const userId = res.user.uid; // Get the user's UID
-                obj.id = userId; // Set the ID in the object
-                delete obj.password; // Remove the password
+                const userId = res.user.uid; 
+                obj.id = userId;
+                delete obj.password; 
 
                 // Save the user data to Firestore
                 try {

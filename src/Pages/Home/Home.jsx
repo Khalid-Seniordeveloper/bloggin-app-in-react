@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
-// import { db } from '../../Configurations/Firebaseconfig';
+
 
 import { auth, getAllData, getData } from '../../Configurations/Firebasemethods';
 import HomeCard from '../../Components/Card/HomeCard';

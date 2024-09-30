@@ -28,20 +28,19 @@ const Dashboard = ({ blogs }) => {
       if (user) {
         console.log(user.uid);
         try {
-          const singleuserdata = await getData("bloogs", user.uid); // Use existing getData function
+          const singleuserdata = await getData("bloogs", user.uid); 
           console.log(singleuserdata);
           setblog(singleuserdata); 
         } catch (error) {
           console.error("Error fetching user data:", error);
         }
       } else {
-        // Optional: Handle case where user is not logged in
         console.log("No user is logged in");
-        setblog(null); // Clear blog data if no user
+        setblog(null); 
       }
     });
   
-    // Cleanup subscription on unmount
+   
     return () => unsubscribe();
   }, []);
 
@@ -121,7 +120,7 @@ return (
             postTime={item.postTime}
             blogTitle={item.data}
             blogDescription={item.description}
-            blogId={item.uid} // Assuming you might want to use the uid for deletion
+            blogId={item.uid} 
         />
     </div>
 ))}
